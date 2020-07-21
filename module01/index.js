@@ -6,18 +6,20 @@
 // price = 2000;
 // console.log(`Выбран «${name}», цена за штуку ${price} кредитов`);
 
-// // //_________Task 2___________
+// //_________Task 2___________
 // const TOTAL = 100;
 // let ordered = 50;
+// let message;
 // // ordered = 20;
 // // ordered = 80;
 // // ordered = 130;
 
 // if (ordered > TOTAL) {
-//   console.log("На складе недостаточно твоаров!");
+//   message = "На складе недостаточно твоаров!";
 // } else {
-//   console.log("Заказ оформлен, с вами свяжется менеджер");
+//   message = "Заказ оформлен, с вами свяжется менеджер";
 // }
+// console.log(message);
 
 // //_________Task 3___________
 // const ADMIN_PASSWORD = "jqueryismyjam";
@@ -33,19 +35,16 @@
 // }
 // alert(message);
 
-// //_________Task 4___________
+//_________Task 4___________
 // let credits = 23580;
 // const pricePerDroid = 3000;
-
 // let order = prompt("Введите количество дроидов к заказу");
 // let orderQty = Number(order);
-// console.log(orderQty);
-// console.log(typeof orderQty);
-
 // let totalPrice = pricePerDroid * orderQty;
-// console.log(totalPrice);
 
-// if (order === null) {
+// if (isNaN(order)) {
+//   console.log("Ввели не число!");
+// } else if (order === null) {
 //   console.log("Отменено пользователем!");
 // } else if (totalPrice > credits) {
 //   console.log("Недостаточно средств на счету!");
@@ -55,37 +54,41 @@
 //     `Вы купили ${orderQty} дроидов, на счету осталось ${credits} кредитов.`
 //   );
 // }
-// //_________Task 5___________
+//_________Task 5___________
 // let country = prompt("Пожалуйста, введите название страны");
-// country = country.toUpperCase();
 // let deliveryPrice = 0;
-
-// switch (country) {
-//   case "КИТАЙ":
-//     deliveryPrice = 100;
-//     break;
-
-//   case "ЧИЛИ":
-//     deliveryPrice = 250;
-//     break;
-
-//   case "АВСТРАЛИЯ":
-//     deliveryPrice = 170;
-//     break;
-//   case "ИНДИЯ":
-//     deliveryPrice = 80;
-//     break;
-
-//   case "ЯМАЙКА":
-//     deliveryPrice = 120;
-//     break;
-
-//   default:
-//     alert("В вашей стране доставка не доступна");
-// }
-// if (deliveryPrice <= 0) {
+// if (country === null) {
+//   console.log("Отменено пользователем!");
 // } else {
-//   alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//   country = country.toUpperCase();
+//   switch (country) {
+//     case "КИТАЙ":
+//       deliveryPrice = 100;
+//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//       break;
+
+//     case "ЧИЛИ":
+//       deliveryPrice = 250;
+//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//       break;
+
+//     case "АВСТРАЛИЯ":
+//       deliveryPrice = 170;
+//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//       break;
+//     case "ИНДИЯ":
+//       deliveryPrice = 80;
+//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//       break;
+
+//     case "ЯМАЙКА":
+//       deliveryPrice = 120;
+//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
+//       break;
+
+//     default:
+//       alert("В вашей стране доставка не доступна");
+//   }
 // }
 
 // /*_________Task 6___________*/
