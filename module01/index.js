@@ -64,31 +64,29 @@
 //   switch (country) {
 //     case "КИТАЙ":
 //       deliveryPrice = 100;
-//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
 //       break;
 
 //     case "ЧИЛИ":
 //       deliveryPrice = 250;
-//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
 //       break;
 
 //     case "АВСТРАЛИЯ":
 //       deliveryPrice = 170;
-//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
 //       break;
 //     case "ИНДИЯ":
 //       deliveryPrice = 80;
-//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
 //       break;
 
 //     case "ЯМАЙКА":
 //       deliveryPrice = 120;
-//       alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`);
 //       break;
 
 //     default:
 //       alert("В вашей стране доставка не доступна");
 //   }
+//   deliveryPrice
+//     ? alert(`Доставка в ${country} будет стоить ${deliveryPrice} кредитов`)
+//     : "";
 // }
 
 // /*_________Task 6___________*/
