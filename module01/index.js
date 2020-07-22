@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 // //_________Task 1___________
 // const name = "Генератор защитного поля";
 // let price = 1000;
