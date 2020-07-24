@@ -118,7 +118,7 @@
 // console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 // console.log(checkForSpam("Best 17 Sales Articles of 2017")); // true - мой вариант
 
-/*Вариант 5 */
+/*Вариант 2 */
 
 // const checkForSpam = function (message) {
 //   message = message.toLowerCase();
