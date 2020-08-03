@@ -4,13 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-HW-01</title>
+    <link rel="stylesheet" href="./css/slyles.css" />
   </head>
   <body>
+    <h2>Задание 1 - категории</h2>
+    <ul id="categories">
+      <li class="item">
+        <h2>Животные</h2>
+
+        <ul>
+          <li>Кот</li>
+          <li>Хомяк</li>
+          <li>Лошадь</li>
+          <li>Попугай</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Продукты</h2>
+
+        <ul>
+          <li>Хлеб</li>
+          <li>Петрушка</li>
+          <li>Творог</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Технологии</h2>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Задание 2 - ингридиенты</h2>
+    <ul id="ingredients"></ul>
+    <h2>Задание 3 - галлерея</h2>
+    <ul id="gallery"></ul>
+    <h2>Задание 4 - счетчик</h2>
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+    <br />
+    <h2>Задание 5 - замена имени на введенное</h2>
+    <input type="text" placeholder="Ваше имя?" id="name-input" />
+    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+    <h2>Задание 6 - проверка содержимого</h2>
+    <input
+      type="text"
+      id="validation-input"
+      data-length="6"
+      placeholder="Введи 6 символов"
+    />
+    <h2>Задание 7 - меняем размер текста ползунком</h2>
+    <input id="font-size-control" type="range" />
+    <br />
+    <span id="text">Абракадабра!</span>
+    <br />
+    <br />
+    <br />
+    <h2>Задание 8 - меняем размер текста ползунком</h2>
+    <div id="controls">
+      <input type="number" min="0" max="100" step="1" />
+      <button type="button" data-action="render">Создать</button>
+      <button type="button" data-action="destroy">Очистить</button>
+    </div>
+
+    <div id="boxes"></div>
+    <br />
+    <br />
+    <br />
     <!-- <script src="./module01/index.js" type="module"></script>
     <script src="./module02/index.js" type="module"></script>
     <script src="./module03/index.js" type="module"></script>
     <script src="./module04/index.js" type="module"></script>
     <script src="./module05/index.js" type="module"></script> -->
-    <script src="./module06/index.js" type="module"></script>
+    <!-- <script src="./module06/index.js" type="module"></script> -->
+    <script src="./module07/index.js" type="module"></script>
   </body>
 </html>

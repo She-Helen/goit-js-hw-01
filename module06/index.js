@@ -76,8 +76,7 @@ import { users } from "./users.js";
 // /* Задание 9 */
 // /* Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends) */
 // const getNamesSortedByFriendsCount = (users) => {
-//   const copyUsers = [...users];
-//   return copyUsers
+//   return users
 //     .sort((prev, next) => prev.friends.length - next.friends.length)
 //     .map((user) => user.name);
 // };
