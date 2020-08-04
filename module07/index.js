@@ -1,51 +1,50 @@
 /* Задание 1 */
-// const categoriesRef = document.querySelector("#categories");
-// categoriesRef.querySelectorAll("h2");
-// const itemRef = categoriesRef.querySelectorAll("li.item");
-// console.log(`В списке ${itemRef.length} категории.`);
+const categoriesRef = document.querySelectorAll("#categories li.item");
 
-// itemRef.forEach((item) => {
-//   console.log(`Категория: ${item.querySelector("h2").textContent}`);
-//   console.log(`Количество элементов: ${item.querySelectorAll("li").length}`);
-// });
+console.log(`В списке ${categoriesRef.length} категории.`);
 
-// /* Задание 2 */
-// const ingredients = [
-//   "Картошка",
-//   "Грибы",
-//   "Чеснок",
-//   "Помидоры",
-//   "Зелень",
-//   "Приправы",
-// ];
-// const ingredientsRef = document.querySelector("ul#ingredients");
-// const items = ingredients.map((ingredient) => {
-//   const item = document.createElement("li");
-//   item.textContent = ingredient;
-//   return item;
-// });
-// ingredientsRef.append(...items);
+categoriesRef.forEach((item) => {
+  console.log(`Категория: ${item.firstElementChild.textContent}`);
+  console.log(`Количество элементов: ${item.lastElementChild.children.length}`);
+});
+
+/* Задание 2 */
+const ingredients = [
+  "Картошка",
+  "Грибы",
+  "Чеснок",
+  "Помидоры",
+  "Зелень",
+  "Приправы",
+];
+const ingredientsRef = document.querySelector("ul#ingredients");
+const items = ingredients.map((ingredient) => {
+  const item = document.createElement("li");
+  item.textContent = ingredient;
+  return item;
+});
+ingredientsRef.append(...items);
 
 // /* Задание 3 */
-// const images = [
-//   {
-//     url:
-//       "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//     alt: "White and Black Long Fur Cat",
-//   },
-//   {
-//     url:
-//       "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-//   },
-//   {
-//     url:
-//       "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//     alt: "Group of Horses Running",
-//   },
-// ];
+const images = [
+  {
+    url:
+      "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url:
+      "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url:
+      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+];
+const galleryRef = document.querySelector("#gallery");
 
-// const galleryRef = document.querySelector("#gallery");
 // /* Задаие 3 Решение 1 - как сказал Александр Репета*/
 // const galaryImages = images.map((image) => {
 //   const cardRef = document.createElement("li");
@@ -59,31 +58,37 @@
 
 // galleryRef.append(...galaryImages);
 
-// /* Задаие 3 Решение 2 - как написано в условии */
-// const galaryImages = images.map((image) => {
-//   return galleryRef.insertAdjacentHTML(
-//     "beforeend",
-//     `<li class="gallery-item"><img src=${image.url} alt=${image.alt}></li>`
-//   );
-// });
+/* Задаие 3 Решение 2 - как написано в условии */
+const galaryImages = images.map((image) => {
+  return `<li class="gallery-item"><img src=${image.url} alt=${image.alt}></li>`;
+});
+
+galleryRef.insertAdjacentHTML("beforeend", galaryImages.join(" "));
 
 /* Задание 4 */
-// const valueRef = document.querySelector("#value");
-// const btnDecrement = document.querySelector('button[data-action="decrement"]');
-// const btnIncrement = document.querySelector('button[data-action="increment"]');
+const valueRef = document.querySelector("#value");
+const btnDecrement = document.querySelector('button[data-action="decrement"]');
+const btnIncrement = document.querySelector('button[data-action="increment"]');
 
-// let counterValue = 0;
+let counterValue = 0;
 
-// btnDecrement.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   counterValue -= 1;
-//   valueRef.textContent = counterValue;
-// });
-// btnIncrement.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   counterValue += 1;
-//   valueRef.textContent = counterValue;
-// });
+const counter = function (param) {
+  param === "plus" ? (counterValue += 1) : (counterValue -= 1);
+};
+
+const update = function () {
+  valueRef.textContent = counterValue;
+};
+
+btnIncrement.addEventListener("click", () => {
+  counter("plus");
+  update();
+});
+
+btnDecrement.addEventListener("click", () => {
+  counter("min");
+  update();
+});
 
 // /* Задание 5 */
 // const inputRef = document.querySelector("#name-input");
